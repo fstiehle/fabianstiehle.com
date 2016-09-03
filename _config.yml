@@ -18,7 +18,7 @@ github_username:  fastiehle
 markdown: kramdown
 
 gems:
-    #- jekyll-minifier
+    - jekyll-minifier
     
 highlighter: rouge
 
