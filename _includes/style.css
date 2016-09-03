@@ -74,14 +74,15 @@ a {
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
-header > a:hover {
+header > a:hover,
+#navi a:hover {
     font-size: 1.8em;
 }
 a,
 a:visited {
     color: #404040;
     text-decoration: underline;
-    text-decoration-color: #ffd700;
+    text-decoration-color: #FFC371;
 }
 a:hover,
 a:focus,
@@ -116,7 +117,11 @@ Page
     display: flex;
     line-height: 1.2;
 }
-header {    
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     order: 0;
     overflow: auto;
     min-width: 250px;
@@ -142,7 +147,11 @@ header {
 .no-bg {
     background-color: transparent !important;
 }
-#me {
+#me { 
+    width: 180px;
+    height: 180px;
+}
+#me > img {
     border-radius: 100%;
 }
 header > a {
@@ -151,16 +160,19 @@ header > a {
     float: left;
     margin-top: 0.5rem;
 }
+.border {
+    border-width: 0 0 3px 0;  
+    border-style: solid;
+    border-image: linear-gradient(to right, #FFC371, #FFB88C) 100% 1; 
+}
 .icon-twitter {
     margin-right: 2px;
 }
 #description {
-    padding: 0 40px;
-    border-bottom: 2px solid #FFDB5C;
+    padding: 0 40px;   
 }
 #frontpage h2 {
-    width: 100%;
-    border-bottom: 2px solid #FFDB5C;  
+    width: 100%;    
 }
 #description,
 .excerpt {
@@ -178,7 +190,6 @@ article {
 }
 footer {
     width: 100%;
-    color: #FFDB5C;
     background-color: #2A2A2A;
 }
 .additionals {
@@ -225,7 +236,6 @@ h2 {
     font-weight: bold;
 }
 .wrapper > .hero > h2 {
-    border-bottom: 2px solid #FFDB5C;
     padding-bottom: 20px;
 }
 h3 {
@@ -457,16 +467,19 @@ widgets
     }
     header {
         flex-grow: 1;
-        max-width: 100%;
         min-width: 100%;
         overflow: hidden;
         padding: 2.0rem 0 1.0rem 0;
     }
     #navi {
-        background-color: #FFDB5C;
+        background: linear-gradient(to right, #FFC371, #FFB88C);
     }
     #navi a {
         color: #fff;
+    }
+    header > a:hover,
+    #navi a:hover {
+        font-size: 1em;
     }
     #items {
         padding: 20px 0 0 0;

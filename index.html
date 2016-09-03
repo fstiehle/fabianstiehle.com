@@ -6,7 +6,7 @@ layout: frontpage
 
     {% for post in site.posts %}
         <article>
-            <h2>  
+            <h2 class="border">
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </h2>
             <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
