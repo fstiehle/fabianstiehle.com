@@ -1,13 +1,3 @@
-(function() {
-    // fix VH mobile bug that recalcs VH on navigation bar hide/show
-    var background;
-    if (background = document.getElementById('bg')) {
-        var style = window.getComputedStyle(background);
-        var height = style.getPropertyValue('min-height');
-        bg.style.minHeight = height;
-    }    
-})();
-
 if(typeof console === 'object') {
     console.log(
         '%c\n' +
