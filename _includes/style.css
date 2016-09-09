@@ -259,7 +259,6 @@ h4 {
     padding: 40px 40px 60px 40px;
     color: #fff;
     height: 100%;
-    text-shadow: 0 1px 3px rgba(78,87,103,0.35);
 }
 .shadow > .hero > h1 {
     color: #fff;
@@ -279,7 +278,7 @@ h4 {
     height: 100%;
     width: 100%;
     min-height: 550px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 #main {
     max-width: 68rem;
