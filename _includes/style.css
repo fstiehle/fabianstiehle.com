@@ -117,9 +117,6 @@ Page
     display: flex;
     line-height: 1.2;
 }
-#frontpage .wrapper {
-    margin: 0;
-}
 header {
     display: flex;
     flex-direction: column;
@@ -268,7 +265,7 @@ h4 {
     margin: auto;
 }
 .shadow > .hero { 
-    margin: 5.0rem auto 5.0rem auto;
+    margin: 5.0rem auto 2.0rem auto;
     /* has no wrapper, so padding is needed */
     padding: 40px 40px 60px 40px;
     color: #fff;
@@ -292,7 +289,7 @@ h4 {
     height: 100%;
     width: 100%;
     min-height: 550px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 #main {    
     max-width: 68rem;
@@ -494,16 +491,7 @@ widgets
 /*--------------------------------------------------------------
 @media
 --------------------------------------------------------------*/
-@media (max-width: 780px) {
-    .wrapper {
-        margin: 0 20px 0 20px;
-        padding: 20px;
-    }
-    .shadow > .hero {
-        margin-top: 40px;
-        /* align with wrapper */
-        padding: 20px 20px 0 20px;
-    }
+@media (max-width: 780px) {    
     #me {
         margin-bottom: 0;
     }
@@ -535,15 +523,18 @@ widgets
 }
 
 @media (max-width: 500px) {
-    .note {
-        font-size: 2.0rem;
+    .wrapper {
+        margin: 0 20px 0 20px;
+        padding: 0;
     }
-}
-
-@media (max-width: 400px) {
-    #description {
-        border: none;
+    .shadow > .hero {
+        margin-top: 40px;
+        /* align with wrapper */
+        padding: 20px 20px 0 20px;
     }    
+    .hero > h1 {
+        font-size: 4.0rem;
+    }
     #frontpage h2,
     h1 {
         font-size: 3.8rem;
@@ -552,6 +543,12 @@ widgets
     h2 {
         font-size: 2.4rem;
     }
+}
+
+@media (max-width: 400px) {
+    #description {
+        border: none;
+    }  
     .note,
     body {
         font-size: 1.8rem;
