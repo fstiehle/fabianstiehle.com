@@ -10,10 +10,10 @@ layout: frontpage
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </h2>
             <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <div class="excerpt">
+            <h3 class="excerpt">
                 {% if post.excerpt %}{{ post.excerpt | strip_html | strip_newlines}}
-                {% else %}{{ post.description }}{% endif %}
-            </div>
+                {% else %}{{ post.description | strip_html | strip_newlines }}{% endif %}
+            </h3>
         </article>
     {% endfor %}
 

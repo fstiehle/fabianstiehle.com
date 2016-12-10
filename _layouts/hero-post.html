@@ -15,13 +15,11 @@ layout: default
         </div>
     </div>
     
-    <div class="wrapper">            
-        <div id="main">
-            <div id="main" itemprop="articleBody">
-                {% include date.html %}
-                {{ content }}
-                {% include twitter.html %}
-            </div>
-         </div>
+    <div class="wrapper{% if page.note %}{{ " note" }}{% endif %}">      
+        <div id="main" itemprop="articleBody">
+            {% include date.html %}
+            {{ content }}
+            {% include twitter.html %}
+        </div>
      </div>
 </article>
