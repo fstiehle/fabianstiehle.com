@@ -117,6 +117,9 @@ Page
     display: flex;
     line-height: 1.2;
 }
+#frontpage > .wrapper {
+    margin: 0;
+}
 header {
     display: flex;
     flex-direction: column;
@@ -523,6 +526,7 @@ widgets
 }
 
 @media (max-width: 500px) {
+    #frontpage > .wrapper,
     .wrapper {
         margin: 0 20px 0 20px;
         padding: 0;
