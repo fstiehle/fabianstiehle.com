@@ -254,7 +254,7 @@ h2,
 h3 {
     font-size: 2.0rem;
     margin: 4.5rem 0 1.5rem 0;
-    font-weight: 600;
+    font-weight: 300;
 }
 h4 {
     font-size: 1.8rem;
@@ -415,6 +415,14 @@ input[type=range] {
 sup { 
     vertical-align: super;
     font-size: smaller;
+}
+li, 
+sup {
+    transition: 1s;
+}
+li:target,
+sup:target {
+    background-color: #FFC371;
 }
 /*--------------------------------------------------------------
 stage
