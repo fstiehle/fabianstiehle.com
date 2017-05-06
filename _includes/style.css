@@ -124,15 +124,19 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     order: 0;
     overflow: auto;
-    min-width: 250px;
+    min-width: 280px;
     max-width: 350px;
     width: auto;
     min-height: 100%;
     padding: 60px 0 60px 0;
-    text-align: center;
+}
+#description h1 {
+    margin-bottom: 0;
+}
+header > div {
+    padding: 0 20px;  
 }
 #navi {
     font-weight: 700;
@@ -146,7 +150,6 @@ header {
 .right,
 .footer-right {
     display: inline-block;
-    float: right;
     margin-right: 10px;
 }
 .no-bg {
@@ -159,12 +162,6 @@ header {
 #me > img {
     border-radius: 100%;
 }
-header > a {
-    display: block;
-    width: 100%;
-    float: left;
-    margin-top: 0.5rem;
-}
 .border {
     border-width: 0 0 3px 0;  
     border-style: solid;
@@ -172,9 +169,6 @@ header > a {
 }
 .icon-twitter {
     margin-right: 2px;
-}
-#description {
-    padding: 0 40px;   
 }
 #frontpage h2 {
     width: 100%;    
@@ -507,7 +501,7 @@ widgets
 /*--------------------------------------------------------------
 @media
 --------------------------------------------------------------*/
-@media (max-width: 780px) {    
+@media (max-width: 880px) {    
     #me {
         margin-bottom: 0;
     }
@@ -522,6 +516,8 @@ widgets
         min-width: 100%;
         overflow: hidden;
         padding: 2.0rem 0 1.0rem 0;
+        align-items: center;
+        text-align: center;
     }
     #navi {
         background: linear-gradient(to right, #FFC371, #FFB88C);
