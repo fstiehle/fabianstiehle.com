@@ -83,7 +83,6 @@ a,
 a:visited {
     color: #404040;
     text-decoration: underline;
-    text-decoration-color: #FFC371;
 }
 a:hover,
 a:focus,
@@ -153,6 +152,7 @@ header > div {
 .footer-right {
     display: inline-block;
     margin-right: 10px;
+    float: right;
 }
 .no-bg {
     background-color: transparent !important;
@@ -542,8 +542,10 @@ widgets
         margin: 0 20px 0 20px;
         padding: 0;
     }
-    .shadow > .hero {
+    .hero {
         margin-top: 40px;
+    }
+    .shadow > .hero {
         /* align with wrapper */
         padding: 20px 20px 0 20px;
     }    
