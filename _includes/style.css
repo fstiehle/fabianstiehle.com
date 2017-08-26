@@ -62,7 +62,7 @@ textarea {
 	color: #404040;
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
-	font-size: 16px;
+	font-size: 19px;
 	font-size: 1.9rem;
 	line-height: 1.6;
 }
@@ -168,6 +168,12 @@ header > div {
     border-width: 0 0 3px 0;  
     border-style: solid;
     border-image: linear-gradient(to right, #FFC371, #FFB88C) 100% 1; 
+}
+#frontpage .border {
+    display: inline;
+}
+#frontpage .post-meta {
+    margin-top: 2.5rem;
 }
 .icon-twitter {
     margin-right: 2px;
