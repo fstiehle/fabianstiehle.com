@@ -1,4 +1,17 @@
 ---
-layout: default
+sass: e5.sass
 ---
-<div id="navi">{% include nav.html %}</div>
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {{ content }}
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

@@ -16,6 +16,8 @@ github_username:  fastiehle
 
 # Build settings
 markdown: kramdown
+sass:
+    sass_dir: _sass
 
 gems:
     - jekyll-minifier

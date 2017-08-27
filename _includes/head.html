@@ -10,9 +10,12 @@
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines}}{% else %}{{ site.description }}{% endif %}">
     
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,700,700italic,300italic,200,200italic">
-
+    
     <style>
-        {% include style.css %}
+        {% capture include_to_sassify %}
+            {% include {{ layout.sass }} %}
+        {% endcapture %}
+        {{ include_to_sassify | scssify }}
     </style>
 
     <link rel="preload" id='font-css' href='{{ "/assets/css/fs.css" }}' as="style" onload="this.rel='stylesheet'">
