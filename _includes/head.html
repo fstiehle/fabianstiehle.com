@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,700,700italic,300italic,200,200italic">
     
     <style>
-        {% capture include_to_sassify %}
-            {% include {{ layout.sass }} %}
+        {% capture include_to_scssify %}
+            {% include {{ layout.scss }} %}
         {% endcapture %}
-        {{ include_to_sassify | scssify }}
+        {{ include_to_scssify | scssify }}
     </style>
 
     <link rel="preload" id='font-css' href='{{ "/assets/css/fs.css" }}' as="style" onload="this.rel='stylesheet'">

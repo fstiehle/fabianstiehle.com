@@ -13,6 +13,7 @@ url: "http://fabianstiehle.com" # the base hostname & protocol for your site
 imgurl: "http://fabianstiehle.com/assets/img"
 twitter_username: fastiehle
 github_username:  fastiehle
+story_dir: story # affects _includes, assets, _sass
 
 # Build settings
 markdown: kramdown
