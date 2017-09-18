@@ -3,11 +3,32 @@
     image: Image in assets/story
     headline
     subline
+    ############
+    1	640
+    2	1339
+    3	1846
+    4	2238
+    5	2592
+    6	2919
+    7	3264
 -->
 <div id="hero">
-  <div class="subline"><h2>{{ include.subline }}</h2></div>
-  <div class="headline"><h1>{{ include.headline }}</h1></div>
+  <div class="text">
+    <div class="headline"><h1>{{ include.headline }}</h1></div>
+    <div class="subline"><h2>{{ include.subline }}</h2></div>
+  </div>
 
-  
+  <img
+    sizes="100vw"
+    srcset="
+      /assets/img/e5/{{ include.image }}_1.jpg 640w,
+      /assets/img/e5/{{ include.image }}_2.jpg 1339w,
+      /assets/img/e5/{{ include.image }}_3.jpg 1846w,
+      /assets/img/e5/{{ include.image }}_4.jpg 2238w,
+      /assets/img/e5/{{ include.image }}_5.jpg 2592w,
+      /assets/img/e5/{{ include.image }}_6.jpg 2919w,
+      /assets/img/e5/{{ include.image }}_7.jpg 3264w"
+    width="1846px" height="1385" src="/assets/img/e5/{{ include.image }}_3.jpg" 
+    alt="{{ include.headline }}: {{ include.subline }}" />
 
 </div>

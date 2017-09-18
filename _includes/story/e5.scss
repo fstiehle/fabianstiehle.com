@@ -1,5 +1,6 @@
 @import "reset.scss";
 @import "story/image.scss";
+@import "story/hero.scss";
 
 $background-color: #111;
 $font-color: #EFEFEF;
@@ -8,9 +9,16 @@ body {
 	color: $font-color;
 	font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-	font-size: 10px;
 	font-size: 1.0rem;
-	line-height: 1.1;
+	line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 1.6rem;
 }
 
 #story {
