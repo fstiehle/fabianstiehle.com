@@ -1,11 +1,16 @@
-@import "reset.sass";
-@import "story/image.sass";
+@import "reset.scss";
+@import "story/image.scss";
 
 $background-color: #111;
 $font-color: #EFEFEF;
 
 body {
-  color: $font-color;
+	color: $font-color;
+	font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+	font-size: 10px;
+	font-size: 1.0rem;
+	line-height: 1.1;
 }
 
 #story {
@@ -16,21 +21,22 @@ body {
 }
 
 .gallery {
-  max-width: 1750px;
+  max-width: 1770px;
+  padding: 0;
   height: 100%;
   margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-content: space-between;
   align-items: flex-start;
 }
 
-footer {
-  display: none;
+img {
+  max-width: 100%;
 }
 
-img {
-  margin: auto;
+footer {
+  display: none;
 }
