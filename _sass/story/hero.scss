@@ -1,3 +1,4 @@
+@import "story/variables.scss";
 
 #hero {
   margin: auto;
@@ -18,6 +19,19 @@
     text-align: center;
     display: block;
     opacity: 1;
+  }
+
+  h1, h2 {
+    color: $font-color-image;
+  }
+
+  h1 {
+    font-size: 6vw;
+    margin-bottom: .2rem;
+  }
+
+  h2 {
+    font-size: 3vw;
   }
 
 }
