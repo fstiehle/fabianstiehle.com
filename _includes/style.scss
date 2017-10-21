@@ -131,6 +131,14 @@ header {
     min-height: 100%;
     padding: 60px 0 60px 0;
 }
+header a {
+    white-space: nowrap;
+    line-height: 1.6;
+    padding-right: 5px;
+}
+header a:last-child {
+    padding: 0;
+}
 #description h1 {
     margin-bottom: 0;
     font-size: 2.6rem;
