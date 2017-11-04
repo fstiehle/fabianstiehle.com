@@ -1,0 +1,26 @@
+@import "story/variables.scss";
+
+.pano {
+  margin-top: $margin;
+  
+  .container {
+    overflow-x: scroll;
+    position: relative;
+  }
+
+  img {
+    max-height: 100vh;
+    width: auto;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+}
+
+.h-scroll-indicator {
+  font-size: 3.0rem;
+  position: absolute;
+  bottom: 3.0rem;
+  right: 3.0rem;
+}

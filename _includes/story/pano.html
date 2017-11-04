@@ -1,0 +1,15 @@
+<!-- 
+  Image pano
+    image: Image in assets/story
+    width
+    height
+-->
+
+<figure class="pano">
+  <div class="container">
+    <img width="{{ include.width }}" height="{{ include.height }}" src="/assets/img/e5/{{ include.image }}.jpg" 
+      alt="{{ include.title }}" />
+    <div class="h-scroll-indicator"><i class="icon-angle-right"></i></div>
+  </div>
+    <figcaption>{{ include.title }}</figcaption>
+</figure>
