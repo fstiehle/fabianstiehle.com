@@ -20,8 +20,8 @@ markdown: kramdown
 sass:
     sass_dir: _sass
 
-gems:
-    - jekyll-minifier
+#gems:
+#    - jekyll-minifier
     
 highlighter: rouge
 

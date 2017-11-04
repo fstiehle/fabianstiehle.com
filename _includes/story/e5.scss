@@ -2,6 +2,8 @@
 @import "story/variables.scss";
 @import "story/image.scss";
 @import "story/hero.scss";
+@import "story/pano.scss";
+@import "story/animations.scss";
 
 body {
 	color: $font-color;
@@ -11,12 +13,25 @@ body {
 	line-height: 1.3;
 }
 
+img {
+  background-color: $font-color;
+}
+
 h1 {
   font-size: 2.6rem;
 }
 
 h2 {
   font-size: 1.6rem;
+}
+
+p {
+  text-align: center;
+  max-width: 875px;
+  padding: 0 20px;
+  margin: auto;
+  margin-top: $margin;
+  font-size: 1.4rem;
 }
 
 #story {
@@ -31,16 +46,17 @@ h2 {
   padding: 0;
   height: 100%;
   margin: auto;
+  margin-top: $margin;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
   align-items: flex-start;
-}
 
-img {
-  max-width: 100%;
+  .gallery-item figcaption:nth-last-of-type(-n+2) {
+    margin-bottom: 0;
+  }
 }
 
 footer {
