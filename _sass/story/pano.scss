@@ -2,14 +2,14 @@
 
 .pano {
   margin-top: $margin;
+  position: relative;
   
   .container {
-    overflow-x: scroll;
-    position: relative;
+    overflow-x: hidden;
   }
 
   img {
-    max-height: 100vh;
+    max-height: 95vh;
     width: auto;
   }
 
@@ -18,9 +18,17 @@
   }
 }
 
-.h-scroll-indicator {
-  font-size: 3.0rem;
+.controlles {
   position: absolute;
-  bottom: 3.0rem;
-  right: 3.0rem;
+  bottom: 10%;
+  width: 100%;
+}
+
+.h-scroll-indicator {
+  font-size: 5.0rem;
+  cursor: pointer;
+}
+
+.scroll {
+  overflow-x: auto !important;
 }

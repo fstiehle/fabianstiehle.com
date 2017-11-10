@@ -62,3 +62,52 @@ p {
 footer {
   display: none;
 }
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+$scrollbar-height: 5px;
+$scrollbar-padding: 15px;
+
+::-webkit-scrollbar {
+  height: (($scrollbar-padding * 2) + $scrollbar-height);
+	background-color: rgba(255,255,255,0);
+}
+
+::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track:vertical {
+  background-color: #212121;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background-color: $font-color;
+}
+
+::-webkit-scrollbar-track:horizontal,
+::-webkit-scrollbar-thumb:horizontal {
+	border: 16px solid rgba(255,255,255,0);
+	background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background-color: #212121;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $font-color;
+	&:hover {
+		border: $scrollbar-padding solid rgba(255,255,255,0);
+	}
+}
