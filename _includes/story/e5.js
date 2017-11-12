@@ -3,7 +3,9 @@
 const textBlocks = document.getElementsByTagName("p"),
       h1 = document.getElementsByClassName("text"),
       galleries = document.getElementsByClassName("gallery"),
-      panos = document.getElementsByClassName("pano");
+      panos = document.getElementsByClassName("pano"),
+      audiosStart = document.getElementsByTagName("audio");
+      audiosEnd = document.getElementsByClassName("audio_end");
   
 /**
  * Delay triggering the scroll waypoint
@@ -15,6 +17,8 @@ const scrollOffset = 30;
  */
 class Waypoint {
   constructor(element) {
+    if (element === undefined)
+      return false;
     this.element = element;
     this.y = element.getBoundingClientRect().top;
     this.setUp();
@@ -109,6 +113,79 @@ class Panorama extends Waypoint {
 }
 
 /**
+ * Waypoint where to start playing sound
+ */
+class AudioStart extends Waypoint {
+
+  constructor(element) {
+    super(element);
+    this.maxVolume = 0.6;
+    this.fadeInDuration = 200;
+  }
+
+  animate() {
+    this.fadePlay(this.element, this.maxVolume, this.fadeInDuration)
+    .then(() => window.nowPlaying.push(this));
+  }
+
+  /**
+   * Fades volume from current element.volume
+   * @param to target volume
+   * @param duration duration to fade in sec
+   */
+  fadePlay(element, to, duration) {    
+    return new Promise((resolve, reject) => {
+      const start = element.volume,
+            change = to - start,
+            increment = 0.1;
+
+      var currentTime = 0;
+      element.play();
+          
+      (function fade() {        
+        currentTime += increment;
+        element.volume = Math.easeInOutQuad(currentTime, start, change, duration);
+        if (currentTime < duration) {
+          setTimeout(fade, increment);
+        }
+        else {
+          resolve();                    
+        }})();
+    });
+  }
+
+  setUp() {
+    this.element.volume = 0;
+  }
+}
+
+/**
+ * Waypoint where to end playing sound
+ */
+class AudioEnd extends AudioStart {
+
+  constructor(element) {
+    super(element);
+    this.fadeOutDuration = this.fadeInDuration * 0.5;
+  }
+  
+  animate() {
+    if (window.nowPlaying.length === 0)
+      return;
+    this.fadePlay(window.nowPlaying.pop().element, 0, this.fadeInDuration);
+  }
+
+  setup() {
+    return false;
+  }
+}
+
+/**
+ * Global audio queue
+ */
+window.nowPlaying = [];
+
+/**
  * Defines all scroll waypoints
  */
 window.waypoints = Array.prototype.slice.call(textBlocks)
@@ -119,8 +196,16 @@ window.waypoints = Array.prototype.slice.call(textBlocks)
 // Add panorama waypoints
 const panowaypoints = Array.prototype.slice.call(panos)
 .map((e) => { return new Panorama(e); })
+// Add audio start waypoints
+const audioStartwaypoints = Array.prototype.slice.call(audiosStart)
+.map((e) => { return new AudioStart(e); })
+// Add audio end waypoints
+const audioEndwaypoints = Array.prototype.slice.call(audiosEnd)
+.map((e) => { return new AudioEnd(e); })
 
 window.waypoints = window.waypoints.concat(panowaypoints)
+.concat(audioStartwaypoints)
+.concat(audioEndwaypoints)
 .filter((e) => { return e.y > 0 })
 .sort((a, b) => b.y - a.y);
 
