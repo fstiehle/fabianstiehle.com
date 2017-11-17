@@ -5,7 +5,7 @@
   position: relative;
   
   .container {
-    overflow-x: hidden;
+    overflow-x: auto;
   }
 
   img {
@@ -29,6 +29,6 @@
   cursor: pointer;
 }
 
-.scroll {
-  overflow-x: auto !important;
+.no-scroll {
+  overflow-x: hidden !important;
 }
