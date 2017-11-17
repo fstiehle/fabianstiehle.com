@@ -1,0 +1,12 @@
+@import "story/variables.scss";
+
+.video-container {
+  text-align: center;
+  margin-top: $margin;
+}
+
+video {
+  max-width: $item-width;
+  width: 100%;
+  height: auto;
+}

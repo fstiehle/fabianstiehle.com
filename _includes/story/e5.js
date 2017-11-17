@@ -1,11 +1,13 @@
 (() => { //IIF
 
 const textBlocks = document.getElementsByTagName("p"),
+      footer = document.getElementsByTagName("footer"),
       h1 = document.getElementsByClassName("text"),
       galleries = document.getElementsByClassName("gallery"),
       panos = document.getElementsByClassName("pano"),
       audiosStart = document.getElementsByTagName("audio");
-      audiosEnd = document.getElementsByClassName("audio_end");
+      audiosEnd = document.getElementsByClassName("audio_end"),
+      videos = document.getElementsByTagName("video");
   
 const debug = true;
 
@@ -178,11 +180,31 @@ class AudioEnd extends AudioStart {
   animate() {
     if (window.nowPlaying.length === 0)
       return;
-    this.fadePlay(window.nowPlaying.pop().element, 0, this.fadeInDuration);
+    audio = window.nowPlaying.pop().element
+    this.fadePlay(audio, 0, this.fadeInDuration).then(() => audio.pause());
   }
 
-  setup() {
+  setUp() {
     return false;
+  }
+}
+/**
+ * Video waypoint
+ */
+class Video extends Waypoint {
+
+  constructor(element, y) {
+    super(element, y);
+  }
+  
+  animate() {
+    this.element.classList.add("animate");
+    setTimeout(() => this.element.play(), 1200);
+  }
+
+  setUp() {
+    super.setUp();
+    this.element.volume = 0;
   }
 }
 
@@ -197,6 +219,7 @@ window.nowPlaying = [];
 window.waypoints = Array.prototype.slice.call(textBlocks)
 .concat(Array.prototype.slice.call(galleries))
 .concat(Array.prototype.slice.call(h1))
+.concat(Array.prototype.slice.call(footer))
 .map((e) => { return new Waypoint(e, e.getBoundingClientRect().top); });
 
 // Add panorama waypoints
@@ -206,12 +229,16 @@ const panowaypoints = Array.prototype.slice.call(panos)
 const audioStartwaypoints = Array.prototype.slice.call(audiosStart)
 .map((e) => { return new AudioStart(e, e.getBoundingClientRect().top); })
 // Add audio end waypoints
-const audioEndwaypoints = Array.prototype.slice.call(audiosEnd)
+const videoWaypoints = Array.prototype.slice.call(audiosEnd)
 .map((e) => { return new AudioEnd(e, e.getBoundingClientRect().top); })
+// Add video waypoints
+const audioEndwaypoints = Array.prototype.slice.call(videos)
+.map((e) => { return new Video(e, e.getBoundingClientRect().top); })
 
 window.waypoints = window.waypoints.concat(panowaypoints)
 .concat(audioStartwaypoints)
-.concat(audioEndwaypoints);
+.concat(audioEndwaypoints)
+.concat(videoWaypoints);
 
 if (debug)
   console.log("Waypoints: " + window.waypoints.length)

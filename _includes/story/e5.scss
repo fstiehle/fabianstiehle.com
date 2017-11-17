@@ -4,6 +4,7 @@
 @import "story/hero.scss";
 @import "story/pano.scss";
 @import "story/animations.scss";
+@import "story/video.scss";
 
 body {
 	color: $font-color;
@@ -53,14 +54,20 @@ p {
   justify-content: center;
   align-content: space-between;
   align-items: flex-start;
-
-  .gallery-item figcaption:nth-last-of-type(-n+2) {
-    margin-bottom: 0;
-  }
 }
 
 footer {
-  display: none;
+  font-size: 1.8rem;
+
+  a {
+    color: $font-color;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+
+  max-width: $item-width;
+  width: 100%;
+  margin: $margin auto;
 }
 
 .right {
