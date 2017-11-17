@@ -3,4 +3,6 @@ _site
 .DS_Store
 _posts
 assets/img
+assets/audio
+assets/video
 .sass-cache
