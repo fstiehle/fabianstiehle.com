@@ -7,6 +7,8 @@ const textBlocks = document.getElementsByTagName("p"),
       audiosStart = document.getElementsByTagName("audio");
       audiosEnd = document.getElementsByClassName("audio_end");
   
+const debug = true;
+
 /**
  * Delay triggering the scroll waypoint
  */
@@ -16,12 +18,14 @@ const scrollOffset = 30;
  * Represents a scroll waypoint
  */
 class Waypoint {
-  constructor(element) {
+  constructor(element, y) {
     if (element === undefined)
       return false;
     this.element = element;
-    this.y = element.getBoundingClientRect().top;
+    this.y = y;
     this.setUp();
+    if (debug)
+      console.log(this.element.className + ": " + this.y);
   }
 
   animate() {
@@ -38,8 +42,8 @@ class Waypoint {
  */
 class Panorama extends Waypoint {
 
-  constructor(element) {
-    super(element);
+  constructor(element, y) {
+    super(element, y);
     this.firstScrollDuration = 3000;
     this.scrollDurationMod = 0.6;
     this.firstScrollWidth = this.firstScrollDuration * 0.35;
@@ -56,7 +60,7 @@ class Panorama extends Waypoint {
 
   showControlles() {
     this.controlles.classList.add("animate");
-    this.container.classList.add("scroll");
+    this.container.classList.remove("no-scroll");
   }
 
   scroll() {
@@ -85,6 +89,8 @@ class Panorama extends Waypoint {
     this.scrollWidth = document.documentElement.clientWidth * 0.75;
     this.container = this.element.querySelector(".container");
     this.controlles = this.element.querySelector(".controlles");
+    this.container.classList.add("no-scroll");
+    this.controlles.classList.add("hidden");
     this.controlles.addEventListener("click", this.controllesListener.bind(this));
   }
 
@@ -117,8 +123,8 @@ class Panorama extends Waypoint {
  */
 class AudioStart extends Waypoint {
 
-  constructor(element) {
-    super(element);
+  constructor(element, y) {
+    super(element, y);
     this.maxVolume = 0.6;
     this.fadeInDuration = 200;
   }
@@ -164,8 +170,8 @@ class AudioStart extends Waypoint {
  */
 class AudioEnd extends AudioStart {
 
-  constructor(element) {
-    super(element);
+  constructor(element, y) {
+    super(element, y);
     this.fadeOutDuration = this.fadeInDuration * 0.5;
   }
   
@@ -191,23 +197,24 @@ window.nowPlaying = [];
 window.waypoints = Array.prototype.slice.call(textBlocks)
 .concat(Array.prototype.slice.call(galleries))
 .concat(Array.prototype.slice.call(h1))
-.map((e) => { return new Waypoint(e); });
+.map((e) => { return new Waypoint(e, e.getBoundingClientRect().top); });
 
 // Add panorama waypoints
 const panowaypoints = Array.prototype.slice.call(panos)
-.map((e) => { return new Panorama(e); })
+.map((e) => { return new Panorama(e, e.getBoundingClientRect().top); })
 // Add audio start waypoints
 const audioStartwaypoints = Array.prototype.slice.call(audiosStart)
-.map((e) => { return new AudioStart(e); })
+.map((e) => { return new AudioStart(e, e.getBoundingClientRect().top); })
 // Add audio end waypoints
 const audioEndwaypoints = Array.prototype.slice.call(audiosEnd)
-.map((e) => { return new AudioEnd(e); })
+.map((e) => { return new AudioEnd(e, e.getBoundingClientRect().top); })
 
 window.waypoints = window.waypoints.concat(panowaypoints)
 .concat(audioStartwaypoints)
-.concat(audioEndwaypoints)
-.filter((e) => { return e.y > 0 })
-.sort((a, b) => b.y - a.y);
+.concat(audioEndwaypoints);
+
+if (debug)
+  console.log("Waypoints: " + window.waypoints.length)
 
 /**
  * Scroll event listener
@@ -218,11 +225,19 @@ const scrollListener = function() {
     window.removeEventListener("load", scrollListener);
     return;
   }
-  waypoints.forEach((element) => {
-    if (!isScrolledIntoView(waypoints.peek().element, scrollOffset))
+  for (i = 0; i < waypoints.length; ++i) {
+    if (isScrolledIntoView(waypoints[i].element, scrollOffset)) {
+      waypoints.splice(i, 1)[0].animate();
+      waypoints = waypoints.filter((e) => { 
+        if (e.element.getBoundingClientRect().top < 0) {
+          e.animate();
+          return false;
+        }
+        return true;
+      });
       return;
-    waypoints.pop().animate();
-  });  
+    }
+  }
 }
 window.addEventListener("scroll", scrollListener);
 window.addEventListener("load", scrollListener);

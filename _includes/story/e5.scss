@@ -106,7 +106,8 @@ $scrollbar-padding: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: $font-color;
+  background-color: $font-color;
+  cursor: pointer;
 	&:hover {
 		border: $scrollbar-padding solid rgba(255,255,255,0);
 	}
