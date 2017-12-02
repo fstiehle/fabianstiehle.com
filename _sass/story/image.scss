@@ -1,5 +1,11 @@
 @import "story/variables.scss";
 
+img {
+  width: 100%;
+  background-color: $font-color;
+  height: auto;
+}
+
 .gallery {
   margin: auto;
   
@@ -12,11 +18,14 @@
 }
 
 figcaption {
-  margin: .5rem 0 2.5rem 0;
+  color: $font-color-secondary;
+  margin: .5rem 0 0 0;
+  margin-right: 2rem;
 }
 
 .gallery-item {
-  margin-top: $margin / 2;
+  max-width: $item-width;
+  margin: ($margin * 0.35) 0.5rem 0 0.5rem;
 
   &:nth-child(1) {
     margin-top: 0;

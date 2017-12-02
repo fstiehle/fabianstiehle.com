@@ -1,0 +1,30 @@
+<!-- 
+  Image full width
+    image: Image in assets/story
+    block-width
+    image-width
+    title
+    ##################################
+    breakpoint at 888, then 100vw
+    normal width 875 (*2 = 1750)
+    640 s
+    1130 m 
+    1527 l
+    1750 xl
+-->
+
+<figure class="full-width">
+  <img
+    sizes="100vw"
+    srcset="
+      /assets/img/e5/{{ include.image }}-6.jpg 640w,
+      /assets/img/e5/{{ include.image }}-5.jpg 1339w,
+      /assets/img/e5/{{ include.image }}-4.jpg 1846w,
+      /assets/img/e5/{{ include.image }}-3.jpg 2238w,
+      /assets/img/e5/{{ include.image }}-2.jpg 2592w,
+      /assets/img/e5/{{ include.image }}-1.jpg 2919w,
+      /assets/img/e5/{{ include.image }}-0.jpg 3264w"
+    width="1846px" height="1385" src="/assets/img/e5/{{ include.image }}_3.jpg" 
+    alt="{{ include.title }}" />
+  <figcaption>{{ include.title }}</figcaption>
+</figure>
