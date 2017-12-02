@@ -1,0 +1,43 @@
+<div class="icons">
+  {% if include.clock %}
+  <div>
+    <object data="/assets/img/e5/icons/svg/001-clock.svg" type="image/svg+xml">
+      Your Browser doesn't support SVG images.
+    </object>
+    Estimated time: {{ include.clock }}
+  </div>
+  {% endif %}
+  {% if include.ascend && include.descend %}
+  <div>
+    <object data="/assets/img/e5/icons/svg/004-mountains.svg" type="image/svg+xml">
+      Your Browser doesn't support SVG images.
+    </object>
+    Ascend: {{ include.ascend }}
+    Descend: {{ include.descend }}
+  </div>
+  {% endif %}
+  {% if include.distance %}
+  <div>
+    <object data="/assets/img/e5/icons/svg/002-gps.svg" type="image/svg+xml">
+      Your Browser doesn't support SVG images.
+    </object>
+    Distance: {{ include.distance }}
+  </div>
+  {% endif %}
+  {% if include.weather %}
+  <div>
+    <object data="/assets/img/e5/icons/svg/010-cloud.svg" type="image/svg+xml">
+      Your Browser doesn't support SVG images.
+    </object>
+    Weather: {{ include.weather }}
+  </div>
+  {% endif %}
+  {% if include.backpack %}
+  <div>
+    <object data="/assets/img/e5/icons/svg/003-backpack.svg" type="image/svg+xml">
+      Your Browser doesn't support SVG images.
+    </object>
+    {{ include.backpack }}
+  </div>
+  {% endif %}
+</div>

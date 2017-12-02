@@ -1,0 +1,27 @@
+@import "story/variables.scss";
+
+.icons {
+  margin-top: $margin - 3rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  div {
+    font-size: 1.3rem;
+    width: 200px;
+    margin-left: 3.0rem;
+    margin-top: 3.0rem;
+  
+    &:nth-child(1) {
+      margin-left: 0rem;
+    }
+  }
+
+  object {
+    margin-bottom: 1.0rem;
+    width: 150px;
+    filter: invert(100%);
+  }
+
+}
