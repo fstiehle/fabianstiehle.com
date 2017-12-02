@@ -9,8 +9,8 @@ email: admin@fabianstiehle.com
 description: > # this means to ignore newlines until "baseurl:"
   Writing about life and technology.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://fabianstiehle.com" # the base hostname & protocol for your site
-imgurl: "http://fabianstiehle.com/assets/img"
+url: "https://fabianstiehle.com" # the base hostname & protocol for your site
+imgurl: "https://fabianstiehle.com/assets/img"
 twitter_username: fastiehle
 github_username:  fastiehle
 story_dir: story # affects _includes, assets, _sass
