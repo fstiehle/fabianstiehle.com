@@ -20,8 +20,10 @@ markdown: kramdown
 sass:
     sass_dir: _sass
 
-#gems:
-#    - jekyll-minifier
+plugins:
+    - jekyll-minifier
+
+exclude: ['node_modules', 'src']
     
 highlighter: rouge
 

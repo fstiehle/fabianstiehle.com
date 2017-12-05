@@ -2,7 +2,9 @@ _site
 .jekyll-metadata
 .DS_Store
 _posts
+_includes/dist
 assets/img
 assets/audio
 assets/video
 .sass-cache
+node_modules
