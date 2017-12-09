@@ -1,0 +1,18 @@
+@import "story/variables.scss";
+
+.pause {
+  max-width: $item-width * 2;
+  margin: auto;
+  margin-top: $margin;
+  position: relative;
+  
+  canvas {
+    z-index: 1;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
