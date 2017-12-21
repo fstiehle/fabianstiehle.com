@@ -1,17 +1,18 @@
 @import "story/variables.scss";
 
 .icons {
-  margin-top: $margin - 3rem;
-  text-align: center;
+  background-color: $sunrise-color;
+  margin-top: $margin;
+  padding: 10rem 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   
   div {
-    font-size: 1.3rem;
-    width: 200px;
-    margin-left: 3.0rem;
-    margin-top: 3.0rem;
+    font-size: $h2-size;
+    font-weight: bold;
+    width: 40%;
   
     &:nth-child(1) {
       margin-left: 0rem;
@@ -19,9 +20,9 @@
   }
 
   object {
-    margin-bottom: 1.0rem;
-    width: 150px;
+    height: 200px;
     filter: invert(100%);
+    opacity: 0.9;
   }
 
 }
