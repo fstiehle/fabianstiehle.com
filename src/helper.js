@@ -74,3 +74,15 @@ export const getDomElements = function(tag) {
   }
   return Array.prototype.slice.call(domElements);    
 }
+
+/**
+ * Checks if el in viewport
+ * Modified from https://stackoverflow.com/a/22480938
+ * @param {DOMElement} el Element to be checked
+ * @param offset Delay triggering the scroll waypoint
+ */
+export const isScrolledIntoView = function(el, offset) {
+  const elemTop = el.getBoundingClientRect().top;
+  const elemBottom = el.getBoundingClientRect().bottom;
+  return elemTop + offset < window.innerHeight && elemBottom >= 0;
+};

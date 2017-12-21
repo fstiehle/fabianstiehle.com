@@ -31,7 +31,7 @@ figcaption {
     margin-top: 0;
   }
 
-  @media (min-width: 1758px) { 
+  @media (min-width: $break-l) { 
     &:nth-child(-n+2) {
       margin-top: 0;
     }

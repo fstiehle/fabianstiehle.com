@@ -1,4 +1,3 @@
-import { debug } from "util";
 import "../helper.js"
 
 /**
@@ -22,7 +21,7 @@ export default class RandomBackground {
 
   draw() {
     const ctx = this.canvas.getContext("2d");
-    const color = "#E4FFE1";  
+    const color = "#E4FFE1";
     ctx.strokeStyle = color;
     ctx.lineWidth = 5;
     ctx.shadowBlur = 6;
@@ -39,6 +38,13 @@ export default class RandomBackground {
     ctx.closePath();
   }
 
+  /**
+   * Recursively draw /\/\...
+   * Return when drawing reaches max width of canvas
+   * @param {CanvasRenderingContext2D} ctx 2D Canvas context
+   * @param {number} x x-coordinate
+   * @param {number} y y-coordinate
+   */
   drawRecTail(ctx, x, y) {
     const angle = Math.getRandomInt(30, 60);
     const offsetHeight = Math.getRandomInt(0, 60);
@@ -62,6 +68,14 @@ export default class RandomBackground {
     this.drawRecTail(ctx, offsetPoint[0], offsetPoint[1]);
   }
 
+  /**
+   * Get new points from start(x,y) angle + length
+   * @param {number} x 
+   * @param {number} y 
+   * @param {number} angle 
+   * @param {number} length
+   * @returns {number[]} Array of new points
+   */
   getPointsFromAngle(x, y, angle, length) {
     // Math.round -> float's are bad for performance    
     const adjacentCathetus = Math.round(length * Math.cos(Math.toRadians(angle)));

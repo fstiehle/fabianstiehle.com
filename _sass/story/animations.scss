@@ -1,22 +1,38 @@
 .animate {
   animation-duration: 1s;
   animation-fill-mode: both;
-  animation-duration: 1s;
-  animation-fill-mode: both;  
   animation-name: fadeInUp;
 }
 
-/* Thanks to: https://fabriceleven.com */
+/* https://daneden.github.io/animate.css/ */
 @keyframes fadeInUp {
   from {    
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
  
   to {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUpBig {
+  animation-name: fadeInUpBig;
 }

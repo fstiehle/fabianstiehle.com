@@ -27,6 +27,7 @@ export default class Panorama extends Waypoint {
     }
   
     scroll() {
+      // Can't I just return this.scrollLeft()?
       return new Promise((resolve, reject) => {
         this.scrollLeft(this.container, this.firstScrollWidth, this.firstScrollDuration)
           .then(() => resolve())

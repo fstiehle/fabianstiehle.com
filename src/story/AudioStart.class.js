@@ -30,7 +30,7 @@ export default class AudioStart extends Waypoint {
       var currentTime = 0;
       element.play();
 
-      (function fade() {        
+      (function fade() {
         currentTime += increment;
         element.volume = Math.easeInOutQuad(currentTime, start, change, duration);
         if (currentTime < duration) {

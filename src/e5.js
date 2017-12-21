@@ -5,7 +5,8 @@ import AudioEnd from "./story/AudioEnd.class.js"
 import Panorama from "./story/Panorama.class.js"
 import Video from "./story/Video.class.js"
 import RandomBackground from "./story/RandomBackground.class.js"
-import { getDomElements } from "./helper.js";
+import { getDomElements, isScrolledIntoView } from "./helper.js";
+import Smiley from "./story/Smiley.class";
 
 ((window) => { //IIF
 
@@ -48,7 +49,9 @@ import { getDomElements } from "./helper.js";
   [Panorama.waypointFactory(".pano"),
   AudioStart.waypointFactory("audio"),
   AudioEnd.waypointFactory(".audio_end"),
-  Video.waypointFactory("video")].forEach((w) => {
+  Video.waypointFactory("video"),
+  Smiley.waypointFactory(".smiley-box")]
+  .forEach((w) => {
     if (w)
       waypoints = waypoints.concat(w);
   });
@@ -83,19 +86,7 @@ import { getDomElements } from "./helper.js";
 
   // Register event listener
   window.addEventListener("scroll", scrollListener);
-  window.addEventListener("load", scrollListener);
-
-  /**
-   * Checks if el in viewport
-   * Modified from https://stackoverflow.com/a/22480938
-   * @param {DOMElement} el Element to be checked
-   * @param offset Delay triggering the scroll waypoint
-   */
-  const isScrolledIntoView = function(el, offset) {
-    const elemTop = el.getBoundingClientRect().top;
-    const elemBottom = el.getBoundingClientRect().bottom;
-    return elemTop + offset < window.innerHeight && elemBottom >= 0;
-  };
+  window.addEventListener("load", scrollListener);  
 
   // Add random p backgrounds
   getDomElements("blockquote").concat(getDomElements("p")).concat(getDomElements(".pause"))

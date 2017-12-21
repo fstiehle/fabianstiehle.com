@@ -2,9 +2,7 @@
 
 #hero {
   margin: auto;
-  width: 100%;
-  text-align: center;
-
+  
   @media (orientation: portrait) { 
     position: relative;
     height: 100%;
@@ -19,33 +17,20 @@
   }
 
   .text {
-    width: 100%;
     position: absolute;
-    bottom: 30%;
-    text-align: center;
+    top: 20vw;
+    left: 10%;
     display: block;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
 
-  h1, h2 {
-    color: $font-color;
-  }
-
-  h1 {
-    font-size: 5rem;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-
-    @media (max-width: $break-s) { 
-      font-size: 4rem;
-    }
-  }
-
-  h2 {
-    font-size: 3rem;
-
-    @media (max-width: $break-s) { 
-      font-size: 2rem;
+    canvas {
+      z-index: -1;
+      opacity: 0.5;
+      overflow: scroll;
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 80vw;
+      height: 120%;
     }
   }
 
