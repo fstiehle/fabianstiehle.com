@@ -1,0 +1,15 @@
+@import "story/variables.scss";
+
+.smiley-box {
+  background-color: $sunrise-color;
+  margin-top: $margin;
+  padding: 10rem 0;
+  text-align: center;
+  font-size: $h2-size;
+}
+
+.smiley {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin-top: 4rem;
+  font-size: 120px;
+}
