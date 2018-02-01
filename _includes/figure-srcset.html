@@ -1,0 +1,10 @@
+<figure>
+  <img srcset="
+  /assets/img/{{ include.image }}-l.jpg {{ include.maxWidth }},
+  /assets/img/{{ include.image }}-m.jpg {{ include.minWidth }}"
+  sizes="(min-width: {{ include.maxWidth }}) {{ include.maxWidth }},
+      100vw"
+  alt="{{ include.alt }}" 
+  src="/assets/img/{{ include.image }}-l.jpg">
+  <figcaption>{{ include.alt }}</figcaption>
+</figure>
