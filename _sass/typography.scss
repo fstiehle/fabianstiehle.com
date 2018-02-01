@@ -1,0 +1,184 @@
+html {
+	font-size: 62.5%;
+}
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	/* System Fonts as used by Medium and WordPress */
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-weight: 400;
+	font-size: 18px;
+	font-size: 1.8rem;
+  line-height: 1.5;
+  
+  @media (max-width: $break-s) {  
+    font-size: 1.8rem;
+  }
+}
+h1,
+#items h2 {    
+  line-height: 1.2;
+}
+h2, h3, h4 {    
+  line-height: 1.4;
+}
+h1,
+#items h2 {
+  font-size: $font-size-h1;
+  font-weight: bold; 
+  margin: 2.0rem 0 3.0rem 0;
+
+  @media (max-width: $break-m) {  
+    font-size: $font-size-h1 - 1;
+  }
+}
+h2,
+#items h3,
+.post-image figcaption {
+  font-size: $font-size-h2;
+  margin: 4.5rem 0 1.5rem 0;
+
+  @media (max-width: $break-m) {  
+    font-size: $font-size-h2 - 0.4;
+  }
+}
+#frontpage h3 {
+  margin-top: 1.0rem;
+}
+h3 {
+  font-size: $font-size-h3;
+  margin: 4.5rem 0 1.5rem 0;
+  font-weight: 600;
+}
+h4 {
+  font-size: $font-size-h4;
+  margin: 2.5rem 0 0.6rem 0;
+  display: inline-block;
+  border-bottom: 2px solid #000;
+}
+pre code {
+  display: block;
+}
+code {
+  text-align: left;
+  margin: 15px 0 15px 0;
+  line-height: 1.7 !important;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 5px;
+  font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  background-color: #f2f2f2;
+  overflow-x: scroll;
+}
+strong, bold {
+  font-weight: 600;
+}
+blockquote {
+  color: #2A2A2A;
+  line-height: 1.5;
+  margin: 2.5rem 0;
+  padding: 10px 0 10px 0;
+  padding-left: 2.0rem;
+  border-left: 5px solid #000;
+}
+p {
+  display: block;
+  width: 100%;
+  margin-top: 2.0rem;
+}
+blockquote > p {
+  margin: 0;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+ul,
+ol {
+	margin: 1.5em 0 1.5em 1.5em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+em, i {
+  font-style: italic;
+}
+sup { 
+  vertical-align: super;
+  font-size: smaller;
+}
+li, 
+sup {
+  transition: 1s;
+}
+li:target,
+sup:target {
+  background-color: #FFC371;
+}
+figure {
+  text-align: center;
+}
+/* not doesn't seem to work here */
+.stage figure {
+  text-align: left;
+}
+figure,
+.stage {
+  margin: 3.0rem 0 3.0rem;
+}
+figcaption {
+  margin: 0.5rem;
+  font-size: 1.6rem;
+  color: #999;
+}
+.stage {   
+  overflow-x: auto;     
+  line-height: 1.2;
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  flex: none;
+}
+.box,
+.stage > figure {
+  margin: 1.5rem 0;
+}
+.column {
+  display: flex;
+  flex-flow: column;
+}
+.box {
+  text-align: center;
+  padding: 20px 30px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  color: #333;
+  font-size: 1.8rem;
+}
+.arrows,
+.box,
+.stage > figure,
+.column {
+  flex: none;
+}
+.arrows {
+  margin: 1rem;
+}
+.footnotes {
+  font-size: 1.6rem;
+}

@@ -1,0 +1,96 @@
+.hero {
+  padding: 20px 0;
+  max-width: 80rem;
+  margin: auto;
+
+  .border {
+    padding-bottom: 1em;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  @media (max-width: $break-m) {  
+    padding-top: 0;
+  }
+}
+.shadow > .hero { 
+  margin: 5.0rem auto 2.0rem auto;
+  /* has no wrapper, so padding is needed */
+  padding: 40px 40px 60px 40px;
+  color: #fff;
+  height: 100%;
+
+  @media (max-width: $break-m) {  
+    /* align with wrapper */
+    padding: 20px 20px 0 20px;
+  }
+}
+.shadow > .hero > h1 {
+  color: #fff;
+}
+.hero-bg {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  /* display at least that from the background image */
+  min-height: 550px;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.shadow {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  min-height: 550px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#main {
+  margin: auto;
+  max-width: 78.0rem;
+}
+.note {
+  font-size: 2.2rem;
+}
+article img {
+  min-width: 200px;
+  height: auto;
+  max-width: 100%;
+}
+.post-image {
+  text-align: center;
+
+  figure {
+    margin-bottom: 8rem;
+  }
+
+  img:hover {
+    opacity: 1;
+  }
+
+  figcaption {
+    color: #404040;
+    padding: 0 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .widget {
+    border: none;
+  }
+}
+.panorama {
+  // Thanks to https://una.im
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 4rem -50vw;
+
+  img:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,26 @@
+.button {
+  font-size: 1.8rem;
+  padding: 0.5em 3em;
+  border-radius: 2px;
+  margin: 40px auto auto auto;
+  background-color: #f06060;
+  box-shadow: 0 3px 0 0 #cd1313;
+  display: inline-block;
+  color: #fff !important;
+  text-decoration: none;
+  clear: both;
+}
+.button > i { /* icon color */
+  color: #fff;
+}
+.button:hover {
+  background-color: #ed4444;
+  color: #fff;
+}
+.button:active {
+  box-shadow: 0 1px 0 0 #cd1313;
+  color: #fff;
+}
+input[type=range] {
+  min-width: 50%;
+}
