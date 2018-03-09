@@ -35,6 +35,11 @@ h1,
     font-size: $font-size-h1 - 1;
   }
 }
+h1 {
+  @media (min-width: $break-l) {  
+    font-size: $font-size-h1 * 1.5;
+  }
+}
 h2,
 #items h3,
 .post-image figcaption {
