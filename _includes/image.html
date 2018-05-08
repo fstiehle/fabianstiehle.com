@@ -1,0 +1,14 @@
+<figure class="gallery-item">
+  <picture>
+    <source media="(orientation: landscape)"
+      sizes="(min-width: {{ include.maxWidth }}) {{ include.maxWidth }},
+      100vw"
+      srcset="{{ include.image }}-l.jpg {{ include.maxWidth }},
+        {{ include.image }}-m.jpg {{ include.minWidth }}"
+    />
+    <source srcset="{{ include.image }}-l-cropped.jpg {{ include.maxWidthCropped }},
+      {{ include.image }}-m-cropped.jpg {{ include.minWidthCropped }}" />
+    <img src="{{ include.image }}-l.jpg" alt="{{ include.alt }}" />
+  </picture>
+  <figcaption>{{ include.alt }}</figcaption>
+</figure>

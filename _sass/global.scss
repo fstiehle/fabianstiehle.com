@@ -76,3 +76,13 @@ img:hover {
 .right {
   float: right;
 }
+
+.hidden-content {
+  max-height: 0;            
+  overflow-y: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.slide-down {            
+  max-height: 20em !important;
+}
