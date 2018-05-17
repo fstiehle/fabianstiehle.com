@@ -1,0 +1,36 @@
+$color-text: #f8f4f5;
+$color-horror: #f71e0e;
+
+.dark {
+  background-color: #201b1d;
+  color: $color-text;
+
+  .twitter > a:hover {
+    color: $color-horror;
+  }
+
+  a {
+    color: $color-text;
+    &:hover {
+      color: $color-horror;
+    }
+  }
+
+  h1,h2,h3,h4 {
+    color: $color-horror;
+  }
+
+  .hero h1, .hero h2{
+    color: $color-text;
+  }
+
+  blockquote {
+    color: $color-text;
+  }
+
+  blockquote,
+  .widget {
+    border: none;
+  }
+}
+

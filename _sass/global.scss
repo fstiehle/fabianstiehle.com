@@ -57,14 +57,17 @@ html {
   padding-bottom: 1.0rem;
 }
 article {
-  margin-bottom: 6.0rem;
+  padding-bottom: 3.0rem;
 }
 footer {
-  margin: 10px auto;
+  padding: 3rem 0;
   text-align: center;
   a {
     margin-right: 15px;
   }
+}
+.additionals {
+  margin-bottom: 1rem;
 }
 img {
   background-color: #f2f2f2;
