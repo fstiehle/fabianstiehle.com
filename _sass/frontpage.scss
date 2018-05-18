@@ -49,8 +49,8 @@
     width: 100%;
     padding: 20px;
     margin: 0;
-    background-color: $color-main-light;
-    margin-bottom: 3.0rem;
+    border: dotted 5px $color-main-light;
+    margin: 3.0rem 0;
   }
 
   article {
