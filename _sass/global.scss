@@ -73,6 +73,10 @@ img {
   background-color: #f2f2f2;
   transition: all .2s ease-in-out;
 }
+iframe {
+  max-width: 100%;
+  width: 100%;
+}
 img:hover {
   opacity: 0.85;
 }
