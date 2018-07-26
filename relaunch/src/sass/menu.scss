@@ -1,0 +1,21 @@
+.menu {
+  //display: flex;
+  //flex-direction: row;
+  font-size: $text__size--h3;
+  overflow-x: auto;
+  white-space: nowrap;
+  line-height: 1.2;
+
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+.menu__item,
+.menu__item--active {
+  margin-right: 1.5rem;
+}
+
+.menu__item--active {
+  //order: -1;
+}
