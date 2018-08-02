@@ -1,0 +1,22 @@
+a,
+button {
+  transition: color .2s ease-in-out;
+}
+a,
+a:visited,
+button {
+  color: $link__color;
+  text-decoration: none;  
+}
+
+p a {
+  color: $text__color;
+  border-bottom: 1px dashed $text__color;
+}
+
+a:hover,
+a:focus,
+a:active,
+button:hover {
+  color: $link__color--hover;
+}

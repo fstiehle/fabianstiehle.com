@@ -1,14 +1,40 @@
-$text__family-sans: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$text__family-serif: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$text__size--h1: 4.1rem;
+/** Typography **/
+$text__family-headings: 'PT Sans', sans-serif;
+$text__family-body: 'PT Serif', serif;
+
+$text__size--h1: 5.2rem;
 $text__size--h2: 3.1rem;
-$text__size--h3: 2.1rem;
-$text__size--medium: 1.8rem;
-$text__size--small: 1.2rem;
+$text__size--h3: 2.5rem;
+$text__size--medium: 2.0rem;
+$text__size--small: 1.6rem;
 
-//$color__primary: 
-//$color__neutral
+/** Color **/
+$color__primary: #f26666;
+$color__primary--light: #ff9894;
+$color__primary--dark: #ba343c;
+$color__secondary: #e5f280;
+$color__secondary--light: #ffffb1;
+$color__secondary--dark: #b1bf50;
+$color__neutral: #100D26;
+
+@mixin gradient($direction) {
+  background-image: linear-gradient(to $direction, $color__primary--dark 0%, $color__neutral 30%)
+}
 
 $text__color: #404040;
 $text__color--light: #808080;
+$text__color--bg: #fff;
+$link__color: $color__primary--dark;
+$link__color--hover: $color__primary--light;
+
+/** Layout **/
+$page__width--max: 1200px;
+$content__width--max: 900px;
+
+$spacing__margin: 2.5rem;
+
+/** Breakpoints **/
+$breakpoint--l: 64em;
+$breakpoint--m: 50em;
+$breakpoint--s: 37.5em;

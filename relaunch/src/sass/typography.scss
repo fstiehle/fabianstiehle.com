@@ -1,0 +1,128 @@
+html {
+  font-size: 62.5%
+}
+
+h1,h2,h3,h4 {
+  line-height: 1.4;
+  margin-bottom: $spacing__margin / 2;
+  margin-top: $spacing__margin * 2;
+}
+
+h1 {
+  font-size: $text__size--h1;
+  line-height: 1.1;
+  font-family: $text__family-headings;
+}
+
+h2 {
+  font-size: $text__size--h2;
+  font-family: $text__family-headings;
+}
+
+h3 {
+  font-size: $text__size--h3;
+  font-family: $text__family-headings;
+}
+
+h4 {
+  font-size: $text__size--medium;
+  font-family: $text__family-headings;
+  text-decoration: underline;
+}
+
+body,
+input,
+select,
+textarea {
+  font-size: $text__size--medium;
+  font-family: $text__family-body;
+  color: $text__color;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+p {
+  margin-top: $spacing__margin;
+}
+
+strong, bold {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+/** Code **/
+pre code {
+  display: block;
+}
+code {
+  text-align: left;
+  margin: 15px 0 15px 0;
+  line-height: 1.7;  
+  border: $color__neutral 1px solid;
+  padding: 5px;
+  font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  overflow-x: scroll;
+}
+
+/** blockquote **/
+blockquote {
+  font-style: italic;
+  max-width: $content__width--max * .75;
+  margin: $spacing__margin;
+  padding: 1.0rem;
+  > p {
+    margin: 0;
+  }
+}
+blockquote.highlight {
+  max-width: 100%;
+  border: none;
+  text-align: center;
+  font-size: $text__size--h3;
+  padding-left: 0;
+
+  i {
+    margin: 2rem 0;
+    display: block;
+  }
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+ul,
+ol {
+	margin: 1.5em 0 1.5em 1.5em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/** Footnote **/
+sup { 
+  vertical-align: super;
+  font-size: smaller;
+}
+li, 
+sup {
+  transition: 1s;
+}
+li:target,
+sup:target {
+  background-color: $link__color;
+}

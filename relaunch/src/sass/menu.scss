@@ -4,7 +4,7 @@
   font-size: $text__size--h3;
   overflow-x: auto;
   white-space: nowrap;
-  line-height: 1.2;
+  line-height: 1.6;
 
   :last-child {
     margin-right: 0;
@@ -14,9 +14,11 @@
 .menu__item,
 .menu__item--active {
   @include link-button();
+  text-decoration: none;
   margin-right: 1.5rem;
 }
 
 .menu__item--active {
   //order: -1;
+  border-bottom: 3px dashed $color__primary--light;
 }

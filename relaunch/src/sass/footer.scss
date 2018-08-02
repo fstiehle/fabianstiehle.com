@@ -1,0 +1,14 @@
+footer {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.footer-bar {
+  font-family: $text__family-headings;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  max-width: 420px;
+  margin: auto;
+}

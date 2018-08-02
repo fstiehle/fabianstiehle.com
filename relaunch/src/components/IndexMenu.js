@@ -14,9 +14,7 @@ const IndexMenu = ({ active, event }) => {
       itemClass = itemClass += " menu__item--active"
     }
     return <button className={itemClass} key={key} onClick={event} id={key}>{menu[key]}</button>
-  }
-    
-  )
+  })
   return (
     <div className="menu">
       {Menu}

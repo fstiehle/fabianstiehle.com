@@ -1,0 +1,68 @@
+.wrapper {
+  padding: 15px;
+  @include breakpoint(s) {
+		padding: 40px;
+	}
+}
+
+.container {
+  max-width: $page__width--max;
+}
+
+.container--center {
+  margin: auto;
+}
+
+.card {
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+
+  :first-child {
+    margin-top: 0;
+  }
+}
+
+.card__background {
+  padding: 40px 0;
+  color: $text__color--bg;
+  @include gradient(top);
+ }
+
+.card__content {
+  position: relative;
+  z-index: 1;
+  @extend .wrapper;
+}
+
+.card__content--constrained {
+  max-width: $page__width--max;
+  margin: auto;
+}
+
+.card__content--l {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.row {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  @include breakpoint(s) {    
+    flex-flow: row;
+    flex-wrap: wrap;
+	}
+}
+
+.row__item--3 {
+  width: 100%;
+  margin: .16%;
+
+  @include breakpoint(s) {
+		width: 33%;
+	}
+}
