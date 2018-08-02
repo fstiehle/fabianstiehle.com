@@ -1,6 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import Menu from '../components/Menu'
+import Footer from '../components/Footer'
 
 const PlainPost = ({ post }) => (
   <div>
@@ -17,6 +18,7 @@ const PlainPost = ({ post }) => (
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>  
     </div>
+    <Footer />
   </div>
 )
 
@@ -39,7 +41,9 @@ const HeroPost = ({ post }) => (
     </div>
     
     <div className="container container--center post__content"
-      dangerouslySetInnerHTML={{ __html: post.html }} />        
+      dangerouslySetInnerHTML={{ __html: post.html }} /> 
+
+    <Footer />       
   </div>
 )
 

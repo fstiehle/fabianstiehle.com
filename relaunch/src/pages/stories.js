@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Menu from '../components/Menu'
 import Card from '../components/Card'
+import Footer from '../components/Footer'
 
 const Stories = ( {data} ) => {
   const edges = data.allMarkdownRemark.edges  
@@ -17,7 +18,8 @@ const Stories = ( {data} ) => {
           <h1>Stories</h1>
         </div>
         {stories}
-      </div>      
+      </div>
+      <Footer />
     </div>
   )
 }
