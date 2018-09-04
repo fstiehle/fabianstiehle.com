@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Menu from '../components/Menu'
 import Card from '../components/Card'
 import Footer from '../components/Footer'
+import Helmet from 'react-helmet'
 
 const Stories = ( {data} ) => {
   const edges = data.allMarkdownRemark.edges  
@@ -12,6 +13,9 @@ const Stories = ( {data} ) => {
 
   return (
     <div>
+      <Helmet
+          title="Stories - Fabian Stiehle"
+        />
       <div className="container container--center">
         <div className="container--small container--center">   
           <div className="wrapper">

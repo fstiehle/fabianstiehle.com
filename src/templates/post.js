@@ -3,9 +3,16 @@ import Img from 'gatsby-image'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import IndexPage from "../pages/index"
+import Helmet from 'react-helmet'
 
 const PlainPost = ({ post }) => (
   <div>
+    <Helmet
+          title={post.frontmatter.title + " - Fabian Stiehle"}
+          meta={[
+            { name: 'description', content: post.frontmatter.excerpt },
+          ]}
+        />
     <div className="container container--center">
       <div className="container--small container--center">   
         <div className="wrapper">

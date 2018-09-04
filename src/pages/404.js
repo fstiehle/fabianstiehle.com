@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import PostLink from '../components/PostLink'
+import Helmet from 'react-helmet'
 
 const NotFoundPage = ({data}) => {
   let edges = data.allMarkdownRemark.edges
@@ -12,6 +13,9 @@ const NotFoundPage = ({data}) => {
 
   return(
     <div>
+      <Helmet
+          title="404 - Fabian Stiehle"
+        />
        <div className="container container--center">
           <div className="container--small container--center">   
             <div className="wrapper">

@@ -38,10 +38,9 @@ export default class IndexPage extends React.Component  {
   return (
       <div>
         <Helmet
-          title="Fabi"
+          title="Fabian Stiehle"
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'Life and technology.' },
           ]}
         />
 

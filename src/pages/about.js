@@ -3,9 +3,13 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
+import Helmet from 'react-helmet'
 
 const About = ({ data }) => (
   <div>
+    <Helmet
+          title="About - Fabian Stiehle"
+        />
     <div className="container container--center">
       <div className="container--small container--center">   
         <div className="wrapper">
