@@ -30,18 +30,17 @@
 
 .card--wmargin,
 .card__content--wmargin {
-  @include breakpoint(s) {
     margin-top: $spacing__margin * 2;
     margin-bottom: $spacing__margin * 1.5;
-	}
-  margin-top: $spacing__margin;
-  margin-bottom: $spacing__margin;
+    &:first-child {
+      margin-top: $spacing__margin;
+    }
 }
 
 .card__background {
   padding: 40px 0;
   color: $text__color--bg;
-  @include gradient(bottom);
+  @include gradient(top);
 
   &:first-child {
     margin-top: 0;

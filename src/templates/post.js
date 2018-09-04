@@ -20,8 +20,6 @@ const PlainPost = ({ post }) => (
           <hr />
         </div>
       </div>
-    </div>
-    <div className="container container--center">
       <div className="wrapper">
         <div className="post__content">
           <h1>{post.frontmatter.title}</h1>

@@ -19,7 +19,7 @@ $color__secondary--dark: #b1bf50;
 $color__neutral: #041736;
 
 @mixin gradient($direction) {
-  background-image: linear-gradient(to $direction, #000, $color__neutral)
+  background-image: linear-gradient(to $direction, #020a16, $color__neutral)
 }
 
 $text__color: #404040;
