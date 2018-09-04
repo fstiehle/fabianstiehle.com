@@ -1,10 +1,17 @@
 .post__meta {
   font-family: $text__family-headings;
-  margin-bottom: .35em;
+  margin-bottom: 1rem;
 }
 
 .post__content {
   max-width: $content__width--max;
   margin: auto;
-  @extend .wrapper;
+
+  h1,h2,h3,h4 {
+    color: $text__color--dark;
+  }
+
+  h2:not(.post__excerpt),h3,h4 {
+    font-weight: bold;
+  }
 }

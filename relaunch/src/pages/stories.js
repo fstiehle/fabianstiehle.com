@@ -12,11 +12,16 @@ const Stories = ( {data} ) => {
 
   return (
     <div>
-      <div className="container container--center">   
-        <div className="wrapper">
-          <Menu /> 
-          <h1>Stories</h1>
+      <div className="container container--center">
+        <div className="container--small container--center">   
+          <div className="wrapper">
+            <Menu />
+            <h1>Stories</h1>
+            <hr />
+          </div>
         </div>
+      </div>
+      <div className="container container--center">   
         {stories}
       </div>
       <Footer />
@@ -39,7 +44,7 @@ export const pageQuery = graphql`
             link
             hero {
               childImageSharp {
-                sizes(maxWidth: 1920, duotone: {highlight: "#ba343c", shadow: "#100D26", opacity: 40}) {
+                sizes(maxWidth: 1920, duotone: {highlight: "#8B575C", shadow: "#041736", opacity: 90}) {
                   ...GatsbyImageSharpSizes_withWebp
                 }
               }

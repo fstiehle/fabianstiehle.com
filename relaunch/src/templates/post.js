@@ -2,21 +2,27 @@ import React from 'react'
 import Img from 'gatsby-image'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
+import IndexPage from "../pages/index"
 
 const PlainPost = ({ post }) => (
   <div>
+    <div className="header container container--center">
+      <div className="container--small container--center">   
+        <div className="wrapper">
+          <Menu />
+        </div>
+      </div>
+    </div>
     <div className="container container--center">
       <div className="wrapper">
-        <Menu />
-      </div>   
-
-      <div className="post__content">
-        <h1>{post.frontmatter.title}</h1>
-        <h2>{post.frontmatter.excerpt}</h2>
-        <div className="post__meta">{post.frontmatter.date}</div>
-
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>  
+        <div className="post__content">
+          <h1>{post.frontmatter.title}</h1>
+          <h2 className="post__excerpt">{post.frontmatter.excerpt}</h2>
+          <div className="post__meta">{post.frontmatter.date}</div>      
+        
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div> 
+      </div> 
     </div>
     <Footer />
   </div>
@@ -24,23 +30,26 @@ const PlainPost = ({ post }) => (
 
 const HeroPost = ({ post }) => (
   <div>
-    <div className="container container--center">
-      <div className="wrapper">
-        <Menu />
+   <div className="container container--center">
+      <div className="container--small container--center">   
+        <div className="wrapper">
+          <Menu />
+          <hr />
+        </div>
       </div>
     </div>
     <div style={{ marginTop: 0 }} className="card card__background">
       <Img style={{ position: `absolute`, top: 0, left: 0, right: 0, zIndex: 0 }}
         sizes={post.frontmatter.hero.childImageSharp.sizes} 
       />
-      <div className="card__content card__content--l card__content--constrained">   
+      <div className="container--small container--center card__content card__content--l">   
         <h1>{post.frontmatter.title}</h1>
-        <h2>{post.frontmatter.excerpt}</h2>
+        <h2 className="post__excerpt">{post.frontmatter.excerpt}</h2>
         <div className="post__meta">{post.frontmatter.date}</div>
       </div>
     </div>
     
-    <div className="container container--center post__content"
+    <div className="container container--center wrapper post__content"
       dangerouslySetInnerHTML={{ __html: post.html }} /> 
 
     <Footer />       
@@ -70,9 +79,7 @@ export const pageQuery = graphql`
         hero {
           childImageSharp {
             sizes(maxWidth: 1920, duotone: {
-              highlight: "#ba343c",
-              shadow: "#100D26",
-              opacity: 40
+              highlight: "#8B575C", shadow: "#041736", opacity: 70
             }) {
                 ...GatsbyImageSharpSizes_withWebp
             }

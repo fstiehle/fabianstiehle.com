@@ -44,14 +44,19 @@ export default class IndexPage extends React.Component  {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-      
-      <div className="container container--center">   
-          <div className="wrapper">
-            <Menu />
-            <IndexMenu active={this.state.menu} event={this.handleClick}/>
+
+        <div className="container container--center">
+          <div className="container--small container--center">   
+            <div style={{paddingBottom: 10}} className="wrapper">
+              <Menu />
+              <IndexMenu active={this.state.menu} event={this.handleClick}/>
+              <hr />
+            </div>
           </div>
         </div>
-        {posts}
+        <div className="index">
+          {posts}
+        </div>
         <Footer />
       </div>
     )
@@ -73,7 +78,7 @@ export const pageQuery = graphql`
             excerpt
             hero {
               childImageSharp {
-                sizes(maxWidth: 1200, duotone: {highlight: "#ba343c", shadow: "#100D26", opacity: 40}) {
+                sizes(maxWidth: 1920, duotone: {highlight: "#8B575C", shadow: "#041736", opacity: 70}) {
                   ...GatsbyImageSharpSizes_withWebp
                 }
               }

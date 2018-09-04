@@ -10,27 +10,28 @@ $text__size--medium: 2.0rem;
 $text__size--small: 1.6rem;
 
 /** Color **/
-$color__primary: #f26666;
-$color__primary--light: #ff9894;
-$color__primary--dark: #ba343c;
+$color__primary: #f15656;
+$color__primary--light: #f58585;
+$color__primary--dark: #ee3737;
 $color__secondary: #e5f280;
 $color__secondary--light: #ffffb1;
 $color__secondary--dark: #b1bf50;
-$color__neutral: #100D26;
+$color__neutral: #041736;
 
 @mixin gradient($direction) {
-  background-image: linear-gradient(to $direction, $color__primary--dark 0%, $color__neutral 30%)
+  background-image: linear-gradient(to $direction, #000, $color__neutral)
 }
 
 $text__color: #404040;
 $text__color--light: #808080;
+$text__color--dark: #2f2f2f;
 $text__color--bg: #fff;
-$link__color: $color__primary--dark;
+$link__color: $color__primary;
 $link__color--hover: $color__primary--light;
 
 /** Layout **/
 $page__width--max: 1200px;
-$content__width--max: 900px;
+$content__width--max: 890px;
 
 $spacing__margin: 2.5rem;
 

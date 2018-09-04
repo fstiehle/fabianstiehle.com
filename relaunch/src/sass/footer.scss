@@ -1,6 +1,5 @@
 footer {
   text-align: center;
-  padding-top: 50px;
 }
 
 .footer-bar {
@@ -11,4 +10,10 @@ footer {
   align-content: space-around;
   max-width: 420px;
   margin: auto;
+}
+
+.footer-bar__item {
+  > a {
+    color: $text__color;
+  }
 }

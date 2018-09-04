@@ -9,23 +9,36 @@ h1,h2,h3,h4 {
 }
 
 h1 {
-  font-size: $text__size--h1;
+  font-size: $text__size--h1 * 0.75;
+  @include breakpoint(s) {
+		font-size: $text__size--h1;
+	}
+
   line-height: 1.1;
   font-family: $text__family-headings;
 }
 
 h2 {
-  font-size: $text__size--h2;
+  font-size: $text__size--h2 * 0.75;
+  @include breakpoint(s) {
+		font-size: $text__size--h2;
+	}
   font-family: $text__family-headings;
 }
 
 h3 {
-  font-size: $text__size--h3;
+  font-size: $text__size--h3 * 0.75;
+  @include breakpoint(s) {
+		font-size: $text__size--h3;
+	}
   font-family: $text__family-headings;
 }
 
 h4 {
-  font-size: $text__size--medium;
+  font-size: $text__size--medium * 0.9;
+  @include breakpoint(s) {
+		font-size: $text__size--medium;
+	}
   font-family: $text__family-headings;
   text-decoration: underline;
 }
@@ -34,7 +47,10 @@ body,
 input,
 select,
 textarea {
-  font-size: $text__size--medium;
+  font-size: $text__size--medium * 0.9;
+  @include breakpoint(s) {
+		font-size: $text__size--medium;
+	}
   font-family: $text__family-body;
   color: $text__color;
   line-height: 1.6;
@@ -53,18 +69,8 @@ em, i {
   font-style: italic;
 }
 
-/** Code **/
-pre code {
-  display: block;
-}
-code {
-  text-align: left;
-  margin: 15px 0 15px 0;
-  line-height: 1.7;  
-  border: $color__neutral 1px solid;
-  padding: 5px;
-  font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  overflow-x: scroll;
+code {  
+  font-size: 1.3rem;
 }
 
 /** blockquote **/
@@ -91,10 +97,9 @@ blockquote.highlight {
 }
 
 hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+  border: 0;
+	border-bottom: $spacing__margin / 2 dotted $color__primary;
+	margin: $spacing__margin 0;
 }
 ul,
 ol {
@@ -118,11 +123,24 @@ sup {
   vertical-align: super;
   font-size: smaller;
 }
+li {
+  @extend p;
+  > p {
+    display: inline;
+  }
+}
 li, 
 sup {
-  transition: 1s;
+  transition: 0.5s;
 }
-li:target,
 sup:target {
   background-color: $link__color;
+  > a {
+    color: $text__color--bg;
+  }
+  
+}
+li:target {
+  border-left: 4px dashed $link__color;
+  padding-left: 10px;
 }

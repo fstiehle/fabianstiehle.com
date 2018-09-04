@@ -14,6 +14,7 @@
 .menu__item,
 .menu__item--active {
   @include link-button();
+  padding-top: 3px;
   text-decoration: none;
   margin-right: 1.5rem;
 }

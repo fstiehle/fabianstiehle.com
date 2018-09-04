@@ -1,0 +1,10 @@
+.social {
+  display: inline-block;
+  font-size: $text__size--h1;
+  line-height: 1.8;
+
+  @include breakpoint(m) {
+    text-align: right;
+    line-height: 1;
+	}
+}

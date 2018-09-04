@@ -1,25 +1,26 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
-import Menu from '../components/Menu'
-import Footer from '../components/Footer'
+import Menu from '../../components/Menu'
+import Footer from '../../components/Footer'
 
 const WhereIWrite = ({ data }) => (
   <div>
-    <div className="container container--center">   
-      <div className="wrapper">
-        <Menu /> 
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <div className="post__excerpt">
+    <div className="container container--center">
+      <div className="container--small container--center">   
+        <div className="wrapper">
+          <Menu />
+          <h1>{data.markdownRemark.frontmatter.title}</h1>
           <h2>{data.markdownRemark.frontmatter.excerpt}</h2>
+          <hr />
         </div>
       </div>
     </div>
 
-    <div className="row">
+    <div className="grid grid--gallery">
       {data.allImageSharp.edges.map(img=> {
       return ( 
-        <div className="row__item--3">
+        <div className="grid__item--3">
           <Img sizes={img.node.sizes} />
       </div>)
       })}

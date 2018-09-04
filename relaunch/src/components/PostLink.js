@@ -11,7 +11,7 @@ const PostLink = ({ post }) => {
 }
 
 const PlainLink = ({ post }) => (
-  <div className="container container--center card card__content">    
+  <div className="container--small container--center card card--wmargin card__content">    
     <Link to={post.frontmatter.path}>
       <h1>{post.frontmatter.title}</h1>            
     </Link>
@@ -28,11 +28,11 @@ const PlainLink = ({ post }) => (
 
 const HeroLink = ({ post }) => (
   <div className="card card__background">
-    <Img style={{ position: `absolute`, top: 0, left: 0, right: 0, zIndex: 0 }}
+    <Img style={{ position: `absolute`, top: "0", left: 0, right: 0, zIndex: 0 }}
       sizes={post.frontmatter.hero.childImageSharp.sizes} 
     />
        
-      <div className="card__content card__content--l card__content--constrained">    
+      <div className="container--small container--center card__content card__content--l">    
         <Link to={post.frontmatter.path}>
           <h1>{post.frontmatter.title}</h1>             
         </Link>    

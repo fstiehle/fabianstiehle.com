@@ -1,30 +1,28 @@
 .full-width {
   // thanks to https://twitter.com/Una
-  width: 100vw;
+  width: 99.4vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
-  margin-right: -50vw;  
+  margin-right: -50vw;
+  padding: 0;
 }
 
 .image-box {
   margin-top: $spacing__margin * 2;
   margin-bottom: $spacing__margin * 2;
-  padding: $spacing__margin 0;
-  background-color: $color__neutral;
   text-align: center;
 }
 
 figure {
   @extend .full-width;
   @extend .image-box;
-  color: $text__color--bg;
 }
 
 figcaption {
   font-size: $text__size--small;
-  max-width: $content__width--max;
+  max-width: $content__width--max * 0.75;
   margin: auto;
   margin-top: $spacing__margin;
 }

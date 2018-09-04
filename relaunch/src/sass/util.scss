@@ -1,0 +1,16 @@
+.border {
+  border: 2px dotted $color__neutral;
+}
+
+.rotating {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}

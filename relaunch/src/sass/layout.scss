@@ -1,12 +1,16 @@
 .wrapper {
-  padding: 15px;
+  padding: 20px;
   @include breakpoint(s) {
-		padding: 40px;
+    padding: 40px;
 	}
 }
 
 .container {
   max-width: $page__width--max;
+}
+
+.container--small {
+  max-width: $page__width--max * 0.8;
 }
 
 .container--center {
@@ -24,21 +28,32 @@
   }
 }
 
+.card--wmargin,
+.card__content--wmargin {
+  @include breakpoint(s) {
+    margin-top: $spacing__margin * 2;
+    margin-bottom: $spacing__margin * 1.5;
+	}
+  margin-top: $spacing__margin;
+  margin-bottom: $spacing__margin;
+}
+
 .card__background {
   padding: 40px 0;
   color: $text__color--bg;
-  @include gradient(top);
+  @include gradient(bottom);
+
+  &:first-child {
+    margin-top: 0;
+  }
  }
 
 .card__content {
   position: relative;
   z-index: 1;
   @extend .wrapper;
-}
-
-.card__content--constrained {
-  max-width: $page__width--max;
-  margin: auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .card__content--l {
@@ -46,11 +61,12 @@
   padding-bottom: 120px;
 }
 
-.row {
+.grid {
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
   align-content: space-between;
+  justify-content: space-between;
 
   @include breakpoint(s) {    
     flex-flow: row;
@@ -58,11 +74,49 @@
 	}
 }
 
-.row__item--3 {
+.grid--gallery {
+  justify-content: left;
+}
+
+.grid__item--3 {
   width: 100%;
   margin: .16%;
 
-  @include breakpoint(s) {
+  @include breakpoint(m) {
 		width: 33%;
 	}
+}
+
+.grid__item--2 {
+  width: 100%;
+  margin: .16%;
+
+  @include breakpoint(m) {
+		width: calc(50% - .32%);
+	}
+}
+
+/** Example grid elements **/
+.grid__sidebar-s {
+  width: 100%;
+  box-sizing: border-box;
+
+  @include breakpoint(m) {   
+    width: 40%; 
+    max-width: 350px;
+	}
+}
+
+.grid__sidebar-l {
+  width: 100%;
+
+  @include breakpoint(m) {   
+    width: calc(60% - 20px); // 20px margin
+	}
+}
+
+.grid__sidebar-s,
+.grid__sidebar-l {
+  height: 100%;
+  margin-bottom: $spacing__margin;
 }

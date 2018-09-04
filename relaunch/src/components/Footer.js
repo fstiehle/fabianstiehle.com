@@ -1,18 +1,18 @@
 import React from "react"
 
 const Footer = () => (
-  <footer className="card">
+  <footer className="card card--wmargin">
     <div className="card__content card__content--constrained">
-      <h3>Do you like what you see? Buy me a coffe.</h3>
+      <h3>Do you like what you see? <a href="https://www.buymeacoffee.com/Fabi">Buy me a coffe.</a></h3>
       <div className="footer-bar">
         <span className="footer-bar__item">
-          <i className="icon-angle-up"></i>Back to top
+          <a href="#top"><i className="icon-up-open-big"></i> Back to top</a>
         </span>
         <span className="footer-bar__item">
-          <i className="icon-github-circled"></i> View Source
+          <a href="https://github.com/fstiehle/fabianstiehle.com"><i className="icon-github-circled"></i> View Source</a>
         </span>
         <span className="footer-bar__item">
-          <i className="icon-rss"></i> Subscribe
+          <a href="/feed.xml"><i className="icon-rss"></i> Subscribe</a>
         </span>
       </div>
     </div>
