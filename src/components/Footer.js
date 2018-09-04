@@ -3,7 +3,8 @@ import React from "react"
 const Footer = () => (
   <footer className="card card--wmargin">
     <div className="card__content card__content--constrained">
-      <div style={{marginBottom: 10}}>Do you like what you see? <a href="https://www.buymeacoffee.com/Fabi">Buy me a coffe.</a></div>
+      <h2>Do you like what you see? <a href="https://www.buymeacoffee.com/Fabi">Buy me a coffe.</a></h2>
+      <hr />
       <div className="footer-bar">
         <span className="footer-bar__item">
           <a href="#top"><i className="icon-up-open-big"></i> Back to top</a>

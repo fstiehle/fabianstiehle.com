@@ -28,7 +28,7 @@ const PlainLink = ({ post }) => (
 
 const HeroLink = ({ post }) => (
   <div className="card card__background">
-    <Img style={{ position: `absolute`, top: "0", left: 0, right: 0, zIndex: 0 }}
+    <Img style={{position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }}
       sizes={post.frontmatter.hero.childImageSharp.sizes} 
     />
        

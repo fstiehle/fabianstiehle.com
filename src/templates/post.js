@@ -45,7 +45,7 @@ const HeroPost = ({ post }) => (
       </div>
     </div>
     <div style={{ marginTop: 0 }} className="card card__background">
-      <Img style={{ position: `absolute`, top: 0, left: 0, right: 0, zIndex: 0 }}
+      <Img style={{position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }}	
         sizes={post.frontmatter.hero.childImageSharp.sizes} 
       />
       <div className="container--small container--center card__content card__content--l">   

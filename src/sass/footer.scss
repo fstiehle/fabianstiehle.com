@@ -1,16 +1,21 @@
 footer {
   text-align: center;
-  font-size: $text__size--h3;
+  font-family: $text__family-headings;
 }
 
 .footer-bar {
-  font-family: $text__family-headings;  
+  font-size: $text__size--medium;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
   max-width: 420px;
   margin: auto;
+  flex-direction: column;
+
+  @include breakpoint(s) {
+    flex-direction: row;
+	}
 }
 
 .footer-bar__item {
