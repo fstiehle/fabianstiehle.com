@@ -15,17 +15,17 @@ const PlainPost = ({ post }) => (
         />
     <div className="container container--center">
       <div className="container--small container--center">   
-        <div className="wrapper">
+        <div style={{paddingBottom: 0}} className="wrapper">
           <Menu />
-          <hr />
-        </div>
-      </div>
-      <div className="wrapper">
-        <div className="post__content">
           <h1>{post.frontmatter.title}</h1>
+          <hr />
           <h2 className="post__excerpt">{post.frontmatter.excerpt}</h2>
           <div className="post__meta">{post.frontmatter.date}</div>      
         
+        </div>
+      </div>
+      <div style={{paddingTop: 0}} className="wrapper">
+        <div className="post__content">
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div> 
       </div> 
