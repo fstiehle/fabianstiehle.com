@@ -24,8 +24,8 @@ const About = ({ data }) => (
       <div className="grid about wrapper">
         
           <div className="grid__item--2">
-            <a style={{display: "block"}} href="https://github.com/fstiehle?tab=repositories">Projects <i className="icon-right-open-big"></i></a>
-            <a style={{display: "block"}} href="/dl/Owl_inspector_master_digital.pdf">Bachelor's Thesis <i className="icon-right-open-big"></i></a>
+            <a style={{display: "block", width: "100%"}} href="https://github.com/fstiehle?tab=repositories">Projects <i className="icon-right-open-big"></i></a>
+            <a style={{display: "block", width: "100%"}} href="/dl/Owl_inspector_master_digital.pdf">Bachelor's Thesis <i className="icon-right-open-big"></i></a>
           </div>
           <div className="grid__item--2 social">
             <a href="https://github.com/fstiehle/"><i className="icon-github-circled"></i></a>
