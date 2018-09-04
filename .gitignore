@@ -1,10 +1,10 @@
-_site
-.jekyll-metadata
-.DS_Store
-_posts
-_includes/dist
-assets/img
-assets/audio
-assets/video
-.sass-cache
+# Project dependencies
+.cache
 node_modules
+yarn-error.log
+
+# Build directory
+/public
+.DS_Store
+
+/data

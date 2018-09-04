@@ -6,10 +6,11 @@ import IndexPage from "../pages/index"
 
 const PlainPost = ({ post }) => (
   <div>
-    <div className="header container container--center">
+    <div className="container container--center">
       <div className="container--small container--center">   
         <div className="wrapper">
           <Menu />
+          <hr />
         </div>
       </div>
     </div>
