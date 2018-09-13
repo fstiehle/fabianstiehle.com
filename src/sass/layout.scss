@@ -10,7 +10,7 @@
 }
 
 .container--small {
-  max-width: $page__width--max * 0.8;
+  max-width: $content__width--max;
 }
 
 .container--center {
@@ -32,9 +32,6 @@
 .card__content--wmargin {
     margin-top: $spacing__margin * 2;
     margin-bottom: $spacing__margin * 1.5;
-    &:first-child {
-      margin-top: $spacing__margin;
-    }
 }
 
 .card__background {

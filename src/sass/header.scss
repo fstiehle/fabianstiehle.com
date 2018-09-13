@@ -1,5 +1,18 @@
 .header {
-  border-width: 0 0 5px 0;
-  border-style: solid;
-  border-image: linear-gradient(to right,#8B575C, $color__neutral) 100% 1;
+  a, button {
+    color: $text__color--bg;
+  }
+  color: $text__color--bg;
+  background-color: $color__primary--dark;
+}
+
+.title {
+  margin-top: 2rem;
+  @include breakpoint(s) {
+		margin-top: 4rem;
+	}
+}
+.site-description {
+  margin-top: 0;
+  margin-bottom: 3rem;
 }

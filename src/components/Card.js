@@ -8,7 +8,7 @@ const Card = ({ data }) => (
       sizes={data.hero.childImageSharp.sizes} 
     />
        
-      <div className="card__content card__content--l card__content--constrained">    
+      <div className="container--small container--center card__content card__content--l">    
         <Link to={data.link}>
           <h1>{data.title}</h1>             
         </Link>  

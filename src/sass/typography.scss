@@ -87,7 +87,10 @@ blockquote.highlight {
   max-width: 100%;
   border: none;
   text-align: center;
-  font-size: $text__size--h3;
+  font-size: $text__size--h3 * 0.75;
+  @include breakpoint(s) {
+		font-size: $text__size--h3;
+	}
   padding-left: 0;
 
   i {
@@ -99,7 +102,7 @@ blockquote.highlight {
 hr {
   border: 0;
 	border-bottom: $spacing__margin / 2 dotted $color__primary;
-	margin: $spacing__margin 0;
+  margin: $spacing__margin 0;
 }
 ul,
 ol {

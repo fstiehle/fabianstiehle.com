@@ -17,15 +17,13 @@ const Stories = ( {data} ) => {
           title="Stories - Fabian Stiehle"
         />
       <div className="container container--center">
-        <div className="container--small container--center">   
-          <div className="wrapper">
-            <Menu />
-            <h1>Stories</h1>
-            <hr />
-          </div>
+        <div className="container--small container--center wrapper">   
+          <Menu />
+          <h1>Stories</h1>
+          <hr />
         </div>
       </div>
-      <div className="container container--center">   
+      <div className="index">   
         {stories}
       </div>
       <Footer />

@@ -44,13 +44,15 @@ export default class IndexPage extends React.Component  {
           ]}
         />
 
-        <div className="container container--center">
-          <div className="container--small container--center">   
-            <div style={{paddingBottom: 10}} className="wrapper">
-              <Menu />
-              <IndexMenu active={this.state.menu} event={this.handleClick}/>
-              <hr />
-            </div>
+        <div className="header">
+          <div className="container container--small container--center wrapper">   
+           <Menu />  
+            <h1 className="title">Fabian</h1>
+            <h2 className="site-description">Writing about technology and life.</h2>
+            
+            <hr />
+            <IndexMenu active={this.state.menu} event={this.handleClick}/>
+          
           </div>
         </div>
         <div className="index">

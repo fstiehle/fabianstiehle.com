@@ -2,9 +2,10 @@
   display: inline-block;
   font-size: $text__size--h1;
   line-height: 1.8;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
 
-  @include breakpoint(m) {
-    text-align: right;
-    line-height: 1;
-	}
+.about {
+  text-align: center;
 }

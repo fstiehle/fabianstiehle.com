@@ -12,14 +12,11 @@ $text__size--small: 1.6rem;
 /** Color **/
 $color__primary: #f15656;
 $color__primary--light: #f58585;
-$color__primary--dark: #ee3737;
-$color__secondary: #e5f280;
-$color__secondary--light: #ffffb1;
-$color__secondary--dark: #b1bf50;
-$color__neutral: #041736;
+$color__primary--dark: #f04646;
+$color__neutral: #000;
 
 @mixin gradient($direction) {
-  background-image: linear-gradient(to $direction, #020a16, $color__neutral)
+  background-color: linear-gradient(to $direction, #020a16, $color__neutral)
 }
 
 $text__color: #404040;

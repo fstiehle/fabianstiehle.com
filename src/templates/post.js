@@ -14,20 +14,17 @@ const PlainPost = ({ post }) => (
           ]}
         />
     <div className="container container--center">
-      <div className="container--small container--center">   
-        <div style={{paddingBottom: 0}} className="wrapper">
-          <Menu />
-          <h1>{post.frontmatter.title}</h1>
-          <hr />
-          <h2 className="post__excerpt">{post.frontmatter.excerpt}</h2>
-          <div className="post__meta">{post.frontmatter.date}</div>      
-        
-        </div>
+      <div className="container--small container--center wrapper">   
+        <Menu />
+        <h1>{post.frontmatter.title}</h1>
+        <h2>{post.frontmatter.excerpt}</h2>
+        <hr />
       </div>
-      <div style={{paddingTop: 0}} className="wrapper">
-        <div className="post__content">
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div> 
+    </div>
+    <div className="container--small container--center wrapper ">
+      <div className="post__content">
+        <div className="post__meta">{post.frontmatter.date}</div>      
+         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div> 
     </div>
     <Footer />
@@ -36,26 +33,19 @@ const PlainPost = ({ post }) => (
 
 const HeroPost = ({ post }) => (
   <div>
-   <div className="container container--center">
-      <div className="container--small container--center">   
-        <div className="wrapper">
-          <Menu />
-          <hr />
-        </div>
-      </div>
-    </div>
     <div style={{ marginTop: 0 }} className="card card__background">
       <Img style={{position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }}	
         sizes={post.frontmatter.hero.childImageSharp.sizes} 
       />
       <div className="container--small container--center card__content card__content--l">   
+        <div style={{position: "absolute", top: 0}}><Menu /></div>
         <h1>{post.frontmatter.title}</h1>
         <h2 className="post__excerpt">{post.frontmatter.excerpt}</h2>
         <div className="post__meta">{post.frontmatter.date}</div>
       </div>
     </div>
     
-    <div className="container container--center wrapper post__content"
+    <div className="container--small container--center wrapper post__content"
       dangerouslySetInnerHTML={{ __html: post.html }} /> 
 
     <Footer />       
