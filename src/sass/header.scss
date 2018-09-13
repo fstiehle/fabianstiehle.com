@@ -2,6 +2,10 @@
   a, button {
     color: $text__color--bg;
   }
+  a:hover, button:hover {
+    color: #eee;
+  }
+
   color: $text__color--bg;
   background-color: $color__primary--dark;
 }
