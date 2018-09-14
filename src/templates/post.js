@@ -38,7 +38,7 @@ const HeroPost = ({ post }) => (
         sizes={post.frontmatter.hero.childImageSharp.sizes} 
       />
       <div className="container--small container--center card__content card__content--l">   
-        <div style={{position: "absolute", top: 0}}><Menu /></div>
+        <div className="header-bg"><Menu /></div>
         <h1>{post.frontmatter.title}</h1>
         <h2 className="post__excerpt">{post.frontmatter.excerpt}</h2>
         <div className="post__meta">{post.frontmatter.date}</div>

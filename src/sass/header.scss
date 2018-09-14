@@ -1,22 +1,32 @@
-.header {
+.header,
+.header-bg {
   a, button {
     color: $text__color--bg;
   }
   a:hover, button:hover {
     color: #eee;
   }
-
   color: $text__color--bg;
+}
+
+.header {
   background-color: $color__primary--dark;
 }
 
-.title {
-  margin-top: 2rem;
+.header-bg {
+  position: absolute;
+  top: -20px;
   @include breakpoint(s) {
-		margin-top: 4rem;
+    top: 0;
 	}
 }
+
+.title {
+  margin-top: 4rem;
+  font-size: $text__size--h1;
+}
 .site-description {
+  font-size: $text__size--h2;
   margin-top: 0;
   margin-bottom: 3rem;
 }

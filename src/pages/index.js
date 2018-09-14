@@ -49,8 +49,7 @@ export default class IndexPage extends React.Component  {
            <Menu /> 
            <IndexMenu active={this.state.menu} event={this.handleClick}/>
            
-            <h1 className="title">Fabian</h1>
-            <h2 className="site-description">Writing about technology and life.</h2>
+           <h1 className="title">About technology and life.</h1>
             
             <hr />
            
