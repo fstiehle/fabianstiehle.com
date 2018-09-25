@@ -2,9 +2,9 @@ import React from 'react'
 
 const menu = {
   "all": "All",
-  "tech": "Technology",
+  "long": "Longform",
   "short": "Shortform",
-  "long": "Longform"
+  "tech": "Technology"
 }
 
 const IndexMenu = ({ active, event }) => {
@@ -16,7 +16,7 @@ const IndexMenu = ({ active, event }) => {
     return <button className={itemClass} key={key} onClick={event} id={key}>{menu[key]}</button>
   })
   return (
-    <div className="menu">
+    <div className="menu menu__sub">
       {Menu}
     </div>
   ) 

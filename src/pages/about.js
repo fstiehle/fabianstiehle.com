@@ -8,18 +8,20 @@ import Helmet from 'react-helmet'
 const About = ({ data }) => (
   <div>
     <Helmet
-          title="About - Fabian Stiehle"
-        />
-    <div className="container container--center">
-      <div className="container--small container--center wrapper">   
-        <Menu />
-      </div>
-    </div>       
+      title="About - Fabian Stiehle" />
+    <div className="header">
+      <div className="container container--center">
+        <div className="container--small container--center wrapper">   
+          <Menu />
+          <h1>Hey, it's me, and I'm writing about technology and life.</h1>
+          <hr />
+        </div>
+      </div>  
+    </div> 
       
     <div className="container container--center"> 
-    <Img sizes={data.imageSharp.sizes} />  
-      <div style={{paddingTop: 0}} className="about wrapper">
-        
+      <div className="about wrapper">
+        <Img sizes={data.imageSharp.sizes} />  
         <div className="social">
             <a href="https://github.com/fstiehle/"><i className="icon-github-circled"></i></a>
             <a href="https://twitter.com/fstiehle"><i className="icon-twitter"></i></a>

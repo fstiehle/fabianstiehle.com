@@ -16,11 +16,13 @@ const Stories = ( {data} ) => {
       <Helmet
           title="Stories - Fabian Stiehle"
         />
-      <div className="container container--center">
-        <div className="container--small container--center wrapper">   
-          <Menu />
-          <h1>Stories</h1>
-          <hr />
+      <div className="header">
+        <div className="container container--center">
+          <div className="container--small container--center wrapper">   
+            <Menu />
+            <h1>Stories</h1>
+            <hr />
+          </div>
         </div>
       </div>
       <div className="index">   

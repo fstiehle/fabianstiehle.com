@@ -31,7 +31,7 @@ export default class IndexPage extends React.Component  {
 
   if (this.state.menu !== "all") {
     edges = edges.filter(edge => edge.node.frontmatter.category.includes(this.state.menu))
-  }  
+  }
   const posts = edges.map(edge => 
     <PostLink key={edge.node.id} post={edge.node} />)
 
@@ -46,13 +46,9 @@ export default class IndexPage extends React.Component  {
 
         <div className="header">
           <div className="container container--small container--center wrapper">   
-           <Menu /> 
-           <IndexMenu active={this.state.menu} event={this.handleClick}/>
-           
-           <h1 className="title">About technology and life.</h1>
-            
+            <Menu /> 
+            <IndexMenu active={this.state.menu} event={this.handleClick}/>
             <hr />
-           
           </div>
         </div>
         <div className="index">
